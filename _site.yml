@@ -1,0 +1,12 @@
+name: "diss_coding_guide"
+title: "Project Guide: Attorney Strategy"
+description: |
+  Project Guide: Attorney Strategy
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
