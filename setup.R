@@ -13,3 +13,7 @@ install.packages("distill")
 ## create site shell
 ## enter name when prompted
 distill::create_website(dir = getwd(), gh_pages = TRUE)
+
+## TASKS
+## to render site
+rmarkdown::render_site()
