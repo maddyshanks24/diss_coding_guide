@@ -6,6 +6,7 @@ getwd()
 remotes::install_github("rstudio/distill")
 
 install.packages("distill")
+library(distill)
 
 ## create site shell
 ## enter name when prompted
