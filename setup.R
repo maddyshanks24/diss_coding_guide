@@ -1,7 +1,4 @@
 
-## start up - install package
-remotes::install_github("juba/rmdformats")
-
 ## check wd
 getwd()
 
@@ -13,6 +10,9 @@ install.packages("distill")
 ## create site shell
 ## enter name when prompted
 distill::create_website(dir = getwd(), gh_pages = TRUE)
+
+## get format for guide
+remotes::install_github("juba/rmdformats")
 
 ## TASKS
 ## to render site

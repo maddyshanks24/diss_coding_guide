@@ -1,5 +1,5 @@
 ---
-title: "Attorney Strategy at the District Courts: Coding Guide"
+title: "Project Guide: Attorney Strategy at the District Courts"
 description: |
   Under Construction!
 site: distill::distill_website
