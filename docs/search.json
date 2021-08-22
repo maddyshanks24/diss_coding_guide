@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-08-22T14:34:56-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Attorney Strategy at the District Courts: Coding Guide",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-08-22T14:34:57-04:00"
+    }
+  ],
+  "collections": []
+}
