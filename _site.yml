@@ -1,7 +1,7 @@
 name: "diss_coding_guide"
 title: "Project Guide"
 description: |
-  Attorney Strategy at the District Courts: Coding Guide
+  Attorney Strategy at the District Courts
 output_dir: "docs"
 navbar:
   right:
