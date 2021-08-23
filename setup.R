@@ -15,6 +15,11 @@ distill::create_website(dir = getwd(), gh_pages = TRUE)
 ## get format for guide
 remotes::install_github("juba/rmdformats")
 
+
+## check versions for adl packages
+packageVersion("distill")
+packageVersion("rmarkdown")
+
 ## TASKS
 ## to render site
 rmarkdown::render_site()
