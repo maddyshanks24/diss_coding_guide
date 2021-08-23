@@ -1,7 +1,7 @@
 ---
-title: "About this site"
+title: "About this Project Guide"
 description: |
-  Some additional details about the website
+  This site will function as a codebook for data collection on attorneys including indicators of demographics, quality characteristics, and district court experience. It also includes additional important information about the project as a whole to provide context and allow you to understand how the data will be used. Enjoy!
 ---
 
 ```{r setup, include=FALSE}

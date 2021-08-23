@@ -1,7 +1,7 @@
 ---
-title: "Project Guide: Attorney Strategy"
+title: "Project Guide: Attorneys at the Federal District Courts"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Welcome to the Project Guide for data collection on attorneys at the federal district courts! This website will serve as the base of the data collection effort and also includes the context of the broader project. Use the links above to access different aspects of the project.
 site: distill::distill_website
 ---
 

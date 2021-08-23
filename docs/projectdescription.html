@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+    
+    
+    <title>Project Description</title>
+
+        <!--radix_placeholder_navigation_in_header-->
+        <meta name="distill:offset" content=""/>
+
+        <script type="application/javascript">
+
+          window.headroom_prevent_pin = false;
+
+          window.document.addEventListener("DOMContentLoaded", function (event) {
+
+            // initialize headroom for banner
+            var header = $('header').get(0);
+            var headerHeight = header.offsetHeight;
+            var headroom = new Headroom(header, {
+              tolerance: 5,
+              onPin : function() {
+                if (window.headroom_prevent_pin) {
+                  window.headroom_prevent_pin = false;
+                  headroom.unpin();
+                }
+              }
+            });
+            headroom.init();
+            if(window.location.hash)
+              headroom.unpin();
+            $(header).addClass('headroom--transition');
+
+            // offset scroll location for banner on hash change
+            // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+            window.addEventListener("hashchange", function(event) {
+              window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+            });
+
+            // responsive menu
+            $('.distill-site-header').each(function(i, val) {
+              var topnav = $(this);
+              var toggle = topnav.find('.nav-toggle');
+              toggle.on('click', function() {
+                topnav.toggleClass('responsive');
+              });
+            });
+
+            // nav dropdowns
+            $('.nav-dropbtn').click(function(e) {
+              $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+              $(this).parent().siblings('.nav-dropdown')
+                 .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+            });
+            $("body").click(function(e){
+              $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+            });
+            $(".nav-dropdown").click(function(e){
+              e.stopPropagation();
+            });
+          });
+        </script>
+
+        <style type="text/css">
+
+        /* Theme (user-documented overrideables for nav appearance) */
+
+        .distill-site-nav {
+          color: rgba(255, 255, 255, 0.8);
+          background-color: #0F2E3D;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        .distill-site-nav a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .distill-site-nav a:hover {
+          color: white;
+        }
+
+        @media print {
+          .distill-site-nav {
+            display: none;
+          }
+        }
+
+        .distill-site-header {
+
+        }
+
+        .distill-site-footer {
+
+        }
+
+
+        /* Site Header */
+
+        .distill-site-header {
+          width: 100%;
+          box-sizing: border-box;
+          z-index: 3;
+        }
+
+        .distill-site-header .nav-left {
+          display: inline-block;
+          margin-left: 8px;
+        }
+
+        @media screen and (max-width: 768px) {
+          .distill-site-header .nav-left {
+            margin-left: 0;
+          }
+        }
+
+
+        .distill-site-header .nav-right {
+          float: right;
+          margin-right: 8px;
+        }
+
+        .distill-site-header a,
+        .distill-site-header .title {
+          display: inline-block;
+          text-align: center;
+          padding: 14px 10px 14px 10px;
+        }
+
+        .distill-site-header .title {
+          font-size: 18px;
+          min-width: 150px;
+        }
+
+        .distill-site-header .logo {
+          padding: 0;
+        }
+
+        .distill-site-header .logo img {
+          display: none;
+          max-height: 20px;
+          width: auto;
+          margin-bottom: -4px;
+        }
+
+        .distill-site-header .nav-image img {
+          max-height: 18px;
+          width: auto;
+          display: inline-block;
+          margin-bottom: -3px;
+        }
+
+
+
+        @media screen and (min-width: 1000px) {
+          .distill-site-header .logo img {
+            display: inline-block;
+          }
+          .distill-site-header .nav-left {
+            margin-left: 20px;
+          }
+          .distill-site-header .nav-right {
+            margin-right: 20px;
+          }
+          .distill-site-header .title {
+            padding-left: 12px;
+          }
+        }
+
+
+        .distill-site-header .nav-toggle {
+          display: none;
+        }
+
+        .nav-dropdown {
+          display: inline-block;
+          position: relative;
+        }
+
+        .nav-dropdown .nav-dropbtn {
+          border: none;
+          outline: none;
+          color: rgba(255, 255, 255, 0.8);
+          padding: 16px 10px;
+          background-color: transparent;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          margin: 0;
+          margin-top: 1px;
+          z-index: 2;
+        }
+
+        .nav-dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 200px;
+          border: 1px solid rgba(0,0,0,0.15);
+          border-radius: 4px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+          z-index: 1;
+          margin-top: 2px;
+          white-space: nowrap;
+          padding-top: 4px;
+          padding-bottom: 4px;
+        }
+
+        .nav-dropdown-content hr {
+          margin-top: 4px;
+          margin-bottom: 4px;
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-dropdown-active {
+          display: block;
+        }
+
+        .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+          color: black;
+          padding: 6px 24px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .nav-dropdown-content .nav-dropdown-header {
+          display: block;
+          padding: 5px 24px;
+          padding-bottom: 0;
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #999999;
+          white-space: nowrap;
+        }
+
+        .nav-dropdown:hover .nav-dropbtn {
+          color: white;
+        }
+
+        .nav-dropdown-content a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+
+        .nav-right .nav-dropdown-content {
+          margin-left: -45%;
+          right: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+          .distill-site-header a.nav-toggle {
+            float: right;
+            display: block;
+          }
+          .distill-site-header .title {
+            margin-left: 0;
+          }
+          .distill-site-header .nav-right {
+            margin-right: 0;
+          }
+          .distill-site-header {
+            overflow: hidden;
+          }
+          .nav-right .nav-dropdown-content {
+            margin-left: 0;
+          }
+        }
+
+
+        @media screen and (max-width: 768px) {
+          .distill-site-header.responsive {position: relative; min-height: 500px; }
+          .distill-site-header.responsive a.nav-toggle {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .distill-site-header.responsive a,
+          .distill-site-header.responsive .nav-dropdown {
+            display: block;
+            text-align: left;
+          }
+          .distill-site-header.responsive .nav-left,
+          .distill-site-header.responsive .nav-right {
+            width: 100%;
+          }
+          .distill-site-header.responsive .nav-dropdown {float: none;}
+          .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+          .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+        }
+
+        /* Site Footer */
+
+        .distill-site-footer {
+          width: 100%;
+          overflow: hidden;
+          box-sizing: border-box;
+          z-index: 3;
+          margin-top: 30px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+
+        /* Headroom */
+
+        d-title {
+          padding-top: 6rem;
+        }
+
+        @media print {
+          d-title {
+            padding-top: 4rem;
+          }
+        }
+
+        .headroom {
+          z-index: 1000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+        }
+
+        .headroom--transition {
+          transition: all .4s ease-in-out;
+        }
+
+        .headroom--unpinned {
+          top: -100px;
+        }
+
+        .headroom--pinned {
+          top: 0;
+        }
+
+        /* adjust viewport for navbar height */
+        /* helps vertically center bootstrap (non-distill) content */
+        .min-vh-100 {
+          min-height: calc(100vh - 100px) !important;
+        }
+
+        </style>
+
+        <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+        <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+        <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+        <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+        <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+        <script type="application/javascript">
+
+        function getMeta(metaName) {
+          var metas = document.getElementsByTagName('meta');
+          for (let i = 0; i < metas.length; i++) {
+            if (metas[i].getAttribute('name') === metaName) {
+              return metas[i].getAttribute('content');
+            }
+          }
+          return '';
+        }
+
+        function offsetURL(url) {
+          var offset = getMeta('distill:offset');
+          return offset ? offset + '/' + url : url;
+        }
+
+        function createFuseIndex() {
+
+          // create fuse index
+          var options = {
+            keys: [
+              { name: 'title', weight: 20 },
+              { name: 'categories', weight: 15 },
+              { name: 'description', weight: 10 },
+              { name: 'contents', weight: 5 },
+            ],
+            ignoreLocation: true,
+            threshold: 0
+          };
+          var fuse = new window.Fuse([], options);
+
+          // fetch the main search.json
+          return fetch(offsetURL('search.json'))
+            .then(function(response) {
+              if (response.status == 200) {
+                return response.json().then(function(json) {
+                  // index main articles
+                  json.articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                  // download collections and index their articles
+                  return Promise.all(json.collections.map(function(collection) {
+                    return fetch(offsetURL(collection)).then(function(response) {
+                      if (response.status === 200) {
+                        return response.json().then(function(articles) {
+                          articles.forEach(function(article) {
+                            fuse.add(article);
+                          });
+                        })
+                      } else {
+                        return Promise.reject(
+                          new Error('Unexpected status from search index request: ' +
+                                    response.status)
+                        );
+                      }
+                    });
+                  })).then(function() {
+                    return fuse;
+                  });
+                });
+
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                              response.status)
+                );
+              }
+            });
+        }
+
+        window.document.addEventListener("DOMContentLoaded", function (event) {
+
+          // get search element (bail if we don't have one)
+          var searchEl = window.document.getElementById('distill-search');
+          if (!searchEl)
+            return;
+
+          createFuseIndex()
+            .then(function(fuse) {
+
+              // make search box visible
+              searchEl.classList.remove('hidden');
+
+              // initialize autocomplete
+              var options = {
+                autoselect: true,
+                hint: false,
+                minLength: 2,
+              };
+              window.autocomplete(searchEl, options, [{
+                source: function(query, callback) {
+                  const searchOptions = {
+                    isCaseSensitive: false,
+                    shouldSort: true,
+                    minMatchCharLength: 2,
+                    limit: 10,
+                  };
+                  var results = fuse.search(query, searchOptions);
+                  callback(results
+                    .map(function(result) { return result.item; })
+                  );
+                },
+                templates: {
+                  suggestion: function(suggestion) {
+                    var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+                      ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+                      : '';
+                    var html = `
+                      <div class="search-item">
+                        <h3>${suggestion.title}</h3>
+                        <div class="search-item-description">
+                          ${suggestion.description || ''}
+                        </div>
+                        <div class="search-item-preview">
+                          ${img}
+                        </div>
+                      </div>
+                    `;
+                    return html;
+                  }
+                }
+              }]).on('autocomplete:selected', function(event, suggestion) {
+                window.location.href = offsetURL(suggestion.path);
+              });
+              // remove inline display style on autocompleter (we want to
+              // manage responsive display via css)
+              $('.algolia-autocomplete').css("display", "");
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
+
+        });
+
+        </script>
+
+        <style type="text/css">
+
+        .nav-search {
+          font-size: x-small;
+        }
+
+        /* Algolioa Autocomplete */
+
+        .algolia-autocomplete {
+          display: inline-block;
+          margin-left: 10px;
+          vertical-align: sub;
+          background-color: white;
+          color: black;
+          padding: 6px;
+          padding-top: 8px;
+          padding-bottom: 0;
+          border-radius: 6px;
+          border: 1px #0F2E3D solid;
+          width: 180px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+          .distill-site-nav .algolia-autocomplete {
+            display: none;
+            visibility: hidden;
+          }
+          .distill-site-nav.responsive .algolia-autocomplete {
+            display: inline-block;
+            visibility: visible;
+          }
+          .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+            margin-left: 0;
+            width: 400px;
+            max-height: 400px;
+          }
+        }
+
+        .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+          width: 90%;
+          outline: none;
+          border: none;
+        }
+
+        .algolia-autocomplete .aa-hint {
+          color: #999;
+        }
+        .algolia-autocomplete .aa-dropdown-menu {
+          width: 550px;
+          max-height: 70vh;
+          overflow-x: visible;
+          overflow-y: scroll;
+          padding: 5px;
+          margin-top: 3px;
+          margin-left: -150px;
+          background-color: #fff;
+          border-radius: 5px;
+          border: 1px solid #999;
+          border-top: none;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+          cursor: pointer;
+          padding: 5px 4px;
+          border-bottom: 1px solid #eee;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+          border-bottom: none;
+          margin-bottom: 2px;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+          overflow: hidden;
+          font-size: 0.8em;
+          line-height: 1.4em;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+          font-size: 1rem;
+          margin-block-start: 0;
+          margin-block-end: 5px;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+          display: inline-block;
+          overflow: hidden;
+          height: 2.8em;
+          width: 80%;
+          margin-right: 4%;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+          display: inline-block;
+          width: 15%;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+          height: 3em;
+          width: auto;
+          display: none;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+          display: initial;
+        }
+
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+          background-color: #eee;
+        }
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+          font-weight: bold;
+          font-style: normal;
+        }
+
+        </style>
+
+
+        <!--/radix_placeholder_navigation_in_header-->
+        <!--radix_placeholder_site_in_header-->
+        <!--/radix_placeholder_site_in_header-->
+        
+        <style type="text/css">
+        body {
+          padding-top: 60px;
+        }
+        </style>
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmd/h/pandoc/header-attrs.js"></script>
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/jquerylib/lib/3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmarkdown/rmd/h/jqueryui/jquery-ui.min.js"></script>
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/navigation-1.1/tabsets.js"></script>
+        <link href="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+        <link href="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/robobook/robobook.css" rel="stylesheet" />
+        <link href="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/robobook/robobook_fonts_embed.css" rel="stylesheet" />
+        <script src="/Library/Frameworks/R.framework/Versions/4.0/Resources/library/rmdformats/templates/robobook/robobook.js"></script>
+    
+    
+    
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+            <!-- robobook start -->   
+   <div class="book with-summary">
+      <div class="book-summary">
+        <ul>
+          <li class="title">Project Description</li>
+          <li class="divider"></li>
+        </ul>
+        <nav role="navigation" id="toc">
+          <ul>
+          <li><a href="#introduction">Introduction</a>
+          <ul>
+          <li><a href="#theoretical-framework">Theoretical Framework</a></li>
+          <li><a href="#research-plan-data-collection">Research Plan: Data Collection</a></li>
+          <li><a href="#research-plan-studying-district-courts">Research Plan: Studying District Courts</a></li>
+          <li><a href="#intellectual-merit">Intellectual Merit</a></li>
+          <li><a href="#broader-impact">Broader Impact</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#footnotes">Footnotes</a></li>
+          </ul></li>
+          </ul>
+        </nav>
+        <ul class="authors">
+          <li class="divider"></li>
+                                <li><span><i class="glyphicon glyphicon-user"></i> Maddy Shanks
+	                        <br />University of South Carolina
+            	                      </span></li>
+                                      </ul>     
+      </div>
+      <div class="book-body fixed">
+        <div class="body-inner">
+            <a class="btn pull-left js-toolbar-action toggle-sidebar" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="#">
+              <span class="glyphicon glyphicon-menu-hamburger"></span>
+            </a>
+            <div class="page-inner">
+              <section id="content" class="normal">
+      
+   
+      <!--radix_placeholder_navigation_before_body-->
+      <header class="header header--fixed" role="banner">
+      <nav class="distill-site-nav distill-site-header">
+      <div class="nav-left">
+      <a href="index.html" class="title">Project Guide: Attorneys</a>
+      </div>
+      <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projectsummary.html">Project Summary</a>
+      <a href="projectdescription.html">Project Description</a>
+      <a href="datamgmtplan.html">Data Management</a>
+      <a href="codingguide.html">Coding Guide</a>
+      <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+      </div>
+      </nav>
+      </header>
+      <!--/radix_placeholder_navigation_before_body-->
+      <!--radix_placeholder_site_before_body-->
+      <!--/radix_placeholder_site_before_body-->
+      
+      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="projectsummary.html">Project Summary</a>
+      </li>
+      <li>
+        <a href="projectdescription.html">Project Description</a>
+      </li>
+      <li>
+        <a href="datamgmtplan.html">Data Management</a>
+      </li>
+      <li>
+        <a href="codingguide.html">Coding Guide</a>
+      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar -->
+        
+      <h1 class="title">Project Description</h1>
+      
+        
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div id="introduction" class="section level1 unnumbered">
+<h1 class="unnumbered">Introduction</h1>
+<p>In political science, the questions we ask are about “who gets what, when, and how." In judicial politics, we ask a different, but related, question-”who wins and who loses?" The judicial politics literature conceptualizes “winning" and”losing" as distilled and simplified dichotomous outcomes. While easy for researchers to understand, this operationalization does not reflect the nuances of litigious wins and losses found in trial court venues. The project proposed herein will attempt to remedy this central oversight, evaluating winning and losing at the federal district courts under a few different lenses, diving deeper than the dichotomous “win" or”lose" decision to which so much of judicial scholarship has been simplified. The district courts are the “workhorses" and the”gatekeepers" of the federal judicial system (Lyles 1995; C. Boyd 2017) but, despite their important role, they are understudied. Trial courts play a unique role in the federal judicial system, answering different kinds of questions than the appellate courts and in a vastly different decision making environment. Their decisions determine the facts of the case and these courts are often a defendant’s first <em>and</em> last opportunity to seek justice. And, decisions made in these trial courts are cumulative, occurring over the lift of a case not just in the final disposition. Yet, scholars rarely consider these distinctions in elaborating and evaluating theories of district court judge decision making.</p>
+<p>Beyond the empirical questions, this project also aims to speak to a key hole in the broader judicial politics literature. It is not just that we care as judicial politics scholars who wins and loses. Rather, this project speaks to what winning and losing mean when we allow the outcomes we study to reflect the questions being asked. Rather than addressing distilled questions of law and law only, as appeals courts do, the trial courts address questions of fact as well and do so with many smaller decisions across the life of a case beyond just the final disposition. These facts should, fundamentally, be the primary influence on the outcome of the case- who wins and who loses. Who did what, when, and why and the evidence for these things are, under the law, the determinants of guilt. In establishing such fact patterns, the trial courts are answering different questions than their appellate counterparts, coming to a different kind of conclusion, and the non-judge actors in the courtroom must work within those constraints to affect the outcome. While much of the existing literature has examined the way the appellate courts decide questions of law, the role of the district courts and the questions addressed there are fundamentally different. And, the mechanisms of decision making and case outcomes that are foundational for the appellate courts are less clear as influences when the questions are focused on fact, not law, and the cumulative decisions of the judge across a case as a response to the strategies of attorneys.</p>
+<p>In this project, I am still concerned with who wins and who loses, but not in the traditional sense. Rather, the questions answered with these case outcomes are different at the trial courts, and that changes the inherent structure of what we understand case outcomes to be. While at the courts of appeals an outcome is an affirmance or reversal, a check on the application of law, an outcome at the trial courts centers on guilt, innocence, and the extent of each, and also manifests in minute decisions over the course of the case in response to the strategies of the other courtroom actors- the attorneys. Up until this point, an outcome has been an outcome, and scholarship has not considered the distinction between the kinds of questions answered with that outcome nor the reactive nature of judges in responding to the questions brought by the attorneys. Motions are how things get done at the trial courts and they affect all aspects of a case, from the venue to logistics, and even how the case is ultimately resolved. While judges decide these motions and have great power to influence the case’s outcome in that ability, they cannot do so without the motion being made by the attorneys in the first place. This project aims to dig into these nuancesand to understand how a broader and deeper understanding of outcomes interact with attorney actions through the trial process and beyond.</p>
+<div id="theoretical-framework" class="section level2 unnumbered">
+<h2 class="unnumbered">Theoretical Framework</h2>
+<p>So much of the judicial politics literature rests on questions of who wins and why- how judges arrive at their decisions. Beginning with C. Herman Pritchett’s <em>The Roosevelt Court</em> (1948), judicial decision making has dominated the literature, and often from a perspective of the role of “politics and values" (p. xii). Through the elaboration of theories of justices’ preferences (Shubert 1965) and attitudes (Rohde and Spaeth 1976), and eventually the attitudinal (Segal and Spaeth 1993) and strategic (Eskridge 1991; Epstein and Knight 1998) models, scholars have sought to understand the”why" of judges’ decisions. Judicial decision making plays more than just a policy role. The decisions affect policy, of course, but more than that they determine the winners and losers in society. And, this is not only true at the Supreme Court where theories of judicial decision making are often developed. Rather, the lower courts and federal district courts in particular demand study for their influence as well.</p>
+<div id="why-the-federal-district-courts" class="section level3 unnumbered">
+<h3 class="unnumbered">Why the Federal District Courts?</h3>
+<p>The federal judicial system is a hierarchy, and with the Supreme Court at the top scholars are often drawn toward studies of the justices’ behavior. This makes sense, because the Supreme Court is unique, the most visible, and, more pragmatically, have the most data available. But, there are other courts in the system that fundamentally play a role in every case that comes before the Supreme Court. The organization of the federal court system requires that cases arriving to our high court have gone not only through a first appeal, at the circuit courts, but that there was a trial in the first place, at the district courts. These district courts are where cases get started, and where their trajectory through the federal judicial system begins. Because of this, they are fundamentally different from the appeals courts, on which so much of the judicial politics literature focusses. And, while research on the federal district courts has expanded in recent years, they are still understudied.</p>
+<p>The federal district courts and district judges in particular fill many roles that are unique from those of their appellate counterparts. Lyles (1995), quoting Henry Abraham, refers to the federal district courts as the “workhorses" of the federal judiciary. As one anonymous judge put it,”justice stops in the district.They either get it here or they can’t get it at all" (Carp and Wheeler 1972, 361). As the first and, more often than not, last courtroom a litigant sees and disposing of over 350,000 cases a year (C. Boyd 2017) it is an apt description of the 94 district courts because although there exists a constitutional guarantee of the right to an appeal, only a small portion of cases are (Haire, Lindquist, and Songer 2003; Eisenberg 2004).<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> In addition to their substantial workload, the federal district courts also function as gatekeepers for the rest of the judicial system (Lyles 1995; C. Boyd 2017). Federal district judges make decisions over the course of a case’s lifespan including on its initiation through the system and these decisions, though subtle, often have vast policy implications and determine if and how the case can progress. And, as Resnik (1982, 1985) points out, district court judges are “managerial" in that they have much more on their plate than just judging, often supervising case processing, the parties involved, and the court’s workload.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Existing studies of the district courts tend to simply borrow models developed to study the appellate courts without considering the ways in which these courts differ, and these differences must be taken into account in order to build appropriate models for studying district judge decision-making. In a review of scholarship on the district courts, C. L. Boyd and Boldt (2017, 273) highlights the challenges of studying the district courts along with the impetus of doing so, stating:</p>
+<blockquote>
+<p>“The business of U.S. district courts is complex and dynamic...involving the interaction of judges, litigants, and lawyers. Each actor holds multiple decision-making opportunities per case that can...affect winners and losers. Our resulting research designs are complicated and the data are hard and expensive to get. However, the importance of overcoming these hurdles is exceptionally meaningful both for understanding the decision making that takes place in these trial courts and for appreciating the broader influence that these courts have on the rest of the federal judicial hierarchy."</p>
+</blockquote>
+</div>
+<div id="district-judge-decision-making" class="section level3 unnumbered">
+<h3 class="unnumbered">District Judge Decision-Making</h3>
+<p>On its face, the application of models like the attitudinal and strategic models, which were developed in relation to the Supreme Court, to the federal district courts is a natural development made smoother by a slight refinement, put most succinctly by Gibson (1983, 9): “judges decisions are a function of what they prefer to do, tempered by what they think they ought to do, but constrained by what they perceive is feasible to do." While these theories might perceive district court judges as motivated primarily by personal preferences, scholars must interpret preferences as determinants of decision making in the context of the trial courts’ position at the bottom of the hierarchy and their unique role in the federal judicial system. Nonetheless, because they follow the same appointment process as the other federal courts and given the number and salience of their decisions, there exists real room for political and preference-driven decision making. As Lyles (1995) finds in surveys and interviews with district judges, they indeed believe their preferences and values inform their decisions.</p>
+<p>Just over a decade after exploring the manifestations of such “extralegal" cues as posited by the attitudinal model at the district courts in”Policymaking and Politics in the Federal District Courts" (Carp and Rowland 1983), the authors revisit their contributions, to advise we should be reluctant to apply models of appellate court decision making to trial courts because of their unique role apart from the appeals courts in the system Rowland and Carp (1996). Rowland and Carp point out two main reasons for this reluctance. First, the institutional characteristics that allow the Supreme Court (and appeals courts to a lesser extent) to be ideologically-minded are absent at the trial courts. Namely, although judges on both courts lack electoral accountability, Supreme Court justices have no ambition for higher office and control their own agenda with docket selection. Second, they posit that the trial courts’ role as fact finders is not compatible with policy-preference driven models of decision making, categorizing the trial courts as those that “establish facts and fit them to laws...rather than to interpret ambiguous statutes and constitutional clauses" (p. 146). In addition to the advice toward wholesale abandonment of the role of preferences in fact finding, Rowland and Carp’s incorporation of agency theory and bureaucratic behavior took tentative, but important, steps toward acknowledging that trial judges are”partisan policymakers with preferences who must incorporate ambiguous signals from their appellate counterparts while synthesizing legal rules to reach outcomes in particularized disputes," (King 1997).</p>
+<p>This development in the literature has become known as the “hierarchy postulate", where the”effect of judges’ policy preferences on their decisions increases as one moves up the judicial hierarchy" (Zorn and Bowie 2010, 1214). In direct comparisons of lower courts to their hierarchical superiors, both Keele et al. (2009) and Epstein, Landes, and Posner (2013) find evidence for a lesser role of ideology in decision making at the trial courts. Though they attribute their findings to different sources of influence, including the structure of the judicial hierarchy (Zorn and Bowie (2010) (2010) and Keele et al. (2009) (2009) to a lesser extent), and individual aspects of institutional constraints like workload (Epstein, Landes, and Posner 2013), these findings make it clear that district court judges face a unique set of influences on their decision making beyond ideology and policy preferences including the kinds of decisions trial judges make, the environment in which they make those decisions, and the reactive nature of district court judges’ decision making.</p>
+<p>First, trial court judges preside over a unique and dynamic case environment, making multiple decisions per case (Kim et al. 2010; Williams and George 2013) and dealing with a complex case process, where there is no pre-determined sequence of events for case disposition, only variants thereof that are pursued by the parties involved. Trial court judges also make decisions over time in a single case and on many kinds of questions, not the distilled, ideological ones encountered at the appeals courts. The various questions trial judges answer arise out of their many roles, not only as fact-finders, but as dispute-resolvers, deadline-setters, and case-supervisors. In fact, if a case goes to trial, the judge will likely not decide the outcome but will have made decisions on procedure, evidence, and testimony over the course of the case that ultimately affect the constraints on, and limits around, either settlement or the jury’s verdict (Dumas and Haynie 2012).</p>
+<p>To be clear, it is not that these various decisions are value-free that limits the role of ideology in trial judge decision making nor is it that trial judges do not make these decisions in light of their policy preferences. Rather, where preference-driven models like the attitudinal and strategic models predict cleanly ideological decision making, the manifestations of such preferences are not clear in the day-to-day decisions a trial judge makes. Political cues are ambiguous, but not absent, at the district courts (Kritzer 1978), so what works ideologically as a conservative or liberal decision on a constitutional, legal issue does not transfer cleanly to the decision on whether a change of venue is necessary, an extension should be granted, the admissibility of evidence, or to the appropriate amount of damages to award, among others. It is not that ideology is not playing a role in these decisions, but that the role it plays is different, manifests itself differently, and must be observed differently as well.</p>
+<p>Additionally, beyond the effects of the institutional arrangement, however, organizational factors also limit the role of preferences in district court judge decision making, where such judges must balance complex and multifaceted organizational pressures, and arguably more of them than other judges in the system (Baum 1997). As these influences weigh on them, their decisional choices become increasingly complex. As Zorn and Bowie (2010) point out, ideology and policy preferences are only two of many competing constraints on trial judge decision-making, and in many circumstances they are likely not the most important ones. For instance, socialization into the judicial profession often begins soon after appointment, with an emphasis on judicial restraint and a reverence for precedent, but also on how to handle the legal and administrative responsibilities that come with a trial court judgeship. In learning to handle these multiple responsibilities, trial court judges also face increasing workloads and responsibilities in managing the judicial process. As “managerial judges" (Resnik 1982), trial judges are responsible for ushering cases through the system, supervising attorneys, and organizing and planning the court docket (Carp and Wheeler 1972). And, trial judges must do this for an ever-increasing caseload, balancing demands for bureaucratic goals of efficiency and the ideological goals of justice (Eisenstein and Jacob 1977; Kritzer 1991; Heise 2000; Bibas 2004; Metcalfe 2016; Smith et al. 2019).</p>
+<p>Finally, just as Rowland and Carp (1996) point out, the increased institutionalized freedom of the Supreme Court in terms of ambition and agenda setting go a long way in allowing policy preferences to prevail in decision making. With little to no influence on the cases over which a judge will preside, trial court judges face many cases that are weak, routine, or ordinary, so legalistic, non-discretionary decision-making is made likely (Baum 2006; Epstein, Landes, and Posner 2013). And in addition to no docket selection, the specific decisions made by a judge must be brought to him or her by an attorney (or self-representing litigant). As Mather (1983, 245) explains, “the traditional model of court as a judge-dominated, formal adversary process of adjudication" does not hold in the trial courts. Judges are reactive, meaning their role is limited to a response to questions asked by the parties before them. Because of this, judges are constrained in the options available to them as they make decisions throughout a case; they cannot simply will a decision about the case into being but must instead wait for the attorneys to bring the issue to them. And, attorneys are often able to work together to achieve mutually beneficial case outcomes, where the judge becomes little more than a rubber stamp for the decisions made by the attorneys in the case, especially where settlements are concerned (Bibas 2004; Metcalfe 2016). This is not to say that judges at all levels are not reactive in nature, but rather that the district court judges are limited in their docket control and ability to set their own agenda, which means what control the Supreme Court may have to be proactive in affecting the set of decisions available to them is absent at the trial courts, limiting their role to being completely reactive.</p>
+<p>Given these limits on the application of appeals-minded models of decision-making, which priviledge ideology as an influence, at the federal trial courts, it is clear that additional considerations likely take precedence. In this dissertation project, I will juxtapose ideology as an influence on district judge decision making with the role attorneys play while situating the theories within the specific and nuanced context of the district courts. For the trial courts, the ultimate case outcome is the culmination of motions, judgements, and decisions made on the part of the judge and attorneys over the process of the case. To understand decision making at the district courts, scholars must meet the decision-makers on their own turf, considering the collection of motions, judgements, and singular decisions <em>in toto</em> at the trial courts, summed in some way, to understand both the procedural outcomes and the case’s ultimate disposition, as well as how the case may or may not proceed on appeal. This is put most clearly by Kim et al. (2010, 85):</p>
+<blockquote>
+<p>A district judge may rule in a single case on multiple occasions and on different types of questions, only a few of which could be dispositive but all of which affect the case’s progress and ultimate outcome. Moreover, because many of the judge’s actions are taken in response to motions by the parties, there is no determinate sequence in which pretrial litigation events occur. Rather, how a case proceeds depends on the choices made by the parties – what motions are filed by whom and how discovery unfolds.</p>
+</blockquote>
+<p>Because of the multiple decision points in a trial and the active role attorneys take in the decision making process, therein lies the weakness in understanding a case outcome as a singular, dichotomous decision and in using that case outcome to understand district judge decision making. Case outcomes are more complex at trial courts and we must understand both the procedural and dispositive outcomes in the context of the trial court environment, including the roles and interaction of the judges and attorneys. We cannot understand an outcome in a criminal trial simply from an ideological standpoint, and instead must consider it in light of the process of the trial as shaped by the attorneys, the way that process affects the ultimate outcome of the case, and the ways process and outcome shape the decision to take the case beyond the trial courts.</p>
+</div>
+</div>
+<div id="research-plan-data-collection" class="section level2 unnumbered">
+<h2 class="unnumbered">Research Plan: Data Collection</h2>
+<p>Scholars of the federal district courts face many logistical challenges to studying them. As Hoffman, Izenman, and Lidicker (2007 pg. 727) suggest, “empirical work about federal trial courts is more expensive, more time-consuming, and more uncertain than one might imagine." While an existing data collection effort funded by the NSF (Grant #1920991) is working to address this difficulty by expanding one of the main corpuses of data on the district courts with some indicators of use to empirical social scientists, the research proposed here centers on extending this data with additional case and attorney indicators to allow scholars to better study the district courts by incorporating the context and nuances surrounding district judge decision-making discussed above.</p>
+<p>The base datasets I will supplement come from the Integrated Database (IDB) of Federal District Court Decisions distributed by the Federal Judicial Center in conjunction with the Administrative Office of the United States Courts and Inter-University Consortium for Political and Social Research (ICPSR). The existing NSF grant’s data collection effort expands on the IDB data for criminal cases and codes, for a random sample subset of the IDB’s universe of criminal cases, 1000 cases per year from 2007-2016 including information on the identity and ideology of federal judges, race and gender of the defendant, and filings and rulings on motions leading to the case’s disposition or termination. Because of the vast proportion of cases that end in settlement, the sampling strategy also codes an oversample of cases disposed of by trials in each year.</p>
+<p>Of crucial importance for my project is the existing data’s focus on criminal cases and the resulting constancy in criminal cases at the federal district courts, both in the litigant pairs and in the criminal process more broadly. Criminal cases are more similar to each other than civil cases are to each other, not only because of the litigants involved but also because the process and issues are likewise more similar and the actors take on more similar roles across criminal cases. And, because the litigant pairs consist entirely of a government prosecution and criminal defendant, additional variation in litigant characteristics and asymmetries are held constant. Limiting the sample to criminal cases will reduce additional variation in case processing and outcomes that will allow me to better capture the influence of both ideology and attorney strategy without muddying the waters with additional covariates.</p>
+<p>This project will supplement the existing data expansion effort with data collection on attorneys, falling under three categories: demographics, quality characteristics, and district court experience. For the first, I will take a similar approach to that of the existing NSF grant, categorizing attorney race and attorney gender for both prosecutors and defense attorneys.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>For the second, I will operationalize attorney quality using Martindale-Hubbell and state bar organization directories to obtain key quality indicators for both prosecutors and defense attorneys. These indicators will include years post-bar admission and whether they received their JD from an Ivy League, state, or other university. For defense attorneys, I will also include a dummy variable indicating whether they are a public defender or privately retained counsel. These indicators of quality, while not perfect, capture both an experiential aspect of quality, where longer-serving attorneys are presumed to be better, with more experience and more connections, than newer attorneys and an educational aspect, presuming that “better" law schools yield better attorneys and that better potential attorneys are admitted to better schools in the first place.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>For the third, I will use WestLaw Edge to code for each attorney their experience with bringing cases at the federal district courts. WestLaw Edge’s Litigation Analytics functionality includes the number of cases in which attorneys have participated in various venues, including specific districts and in the federal district courts as a whole. Moreover, to gauge the familiarity between district judges and attorneys, I will construct a measure of attorney-judge shared dockets, also using Litigation Analytics, based on the number of cases an attorney shares with specific judges divided by the total number of cases an attorney has brought at the district courts.</p>
+<p>I intend to supplement the existing NSF data collection effort with attorney demographics, quality characteristics, and district court experience indicators for the three most recent years of the expanded data.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> This collection will be completed with the help of undergraduate research assistants and will result in 3000-5000 case observations. Following data collection, I will work with the research assistants to organize and clean the data, and prepare it for distribution in several widely recognized formats, ensuring that the resulting datasets are easily merged with both the base IDB data and the resulting datasets from the NSF-funded data expansion.</p>
+<p>With this data come a few concerns, mainly in terms of selection effects and sample issues. As elaborated in Boyd, Kim, and Schlanger (2020), availability of data for the district courts only captures part of the “iceberg", and the work trial courts do looks different depending on how you conceptualize and operationalize that work and what data source is used. While the ICPSR Federal District Court Decision data includes the universe of cases, it is unclear where the organizers collected the data for case level variables. If coders relied on a source like Westlaw, which is the source for the NSF grant’s collection of judge and motion data, some cases will be missing data and not on a random basis. Even if this universe of cases uses PACER docket sheets, however, because the existing NSF grant’s data collection relies on Westlaw availability, a non-random set of dockets are available for inclusion in the sample, which may lead to bias in any analyses using this data. Put more clearly, only a”small, non-random slice of motion activity in district court cases is visible..." on Westlaw (Boyd, Kim, and Schlanger 2020, 12). Often, for example, Westlaw excludes orders it considers routine (Epstein, Landes, and Posner 2013), and the availability of motion data varies temporally and geographically. This does not mean this data will not be useful, nor does it invalidate any findings or conclusions I may draw. Rather, it is simply an artifact of the data of which I will need to be mindful in proceeding with the project’s analyses.</p>
+<p>Data collection will begin in September of 2021 when funds are disbursed and run through April of 2022. Analyses will begin as data become available with final analyses occurring May through July of 2022. Preliminary results will be presented at the Southern Political Science Association Annual Meeting in January of 2022 and Midwest Political Science Association Annual Meeting in April of 2022, and more final results at the American Political Science Association Annual Meeting in September of 2022.</p>
+</div>
+<div id="research-plan-studying-district-courts" class="section level2 unnumbered">
+<h2 class="unnumbered">Research Plan: Studying District Courts</h2>
+<p>From the data collected on attorney demographics, quality characteristics, and district court experience, I will be able to test the influence of attorneys and the relationships between attorney strategy and judicial decision-making in several ways. Making use of both this novel and existing data, my dissertation will aim to add breadth and depth to our understanding of case processes and dispositions at the trial courts, as well as beyond to the decision to appeal, taking into account the unique role of the federal district courts in the judicial system and the context in which district court decisions are made. Each of these chapters will rely on this observational data and quantitative analysis, while the third, discussing the decision to appeal, incorporates a decision-theoretic formal model.</p>
+<div id="attorney-strategy" class="section level4 unnumbered">
+<h4 class="unnumbered">Attorney Strategy</h4>
+<p>In the first section, I will broaden the concept of “winning" and”losing" to an additional arena of contestation in the trial court process, that of motions, and will study the role of attorneys in shaping the progression of a case from the first filing to its conclusion. The goal in this section is to evaluate the role and influence of attorneys in affecting judicial decision-making over the progression of a case. This section will dig into the reactive nature of judges, especially at the district court, where a lack of docket control means the judges are, in a sense, at the mercies of the attorneys. The range of decisions available to the judges are limited by the attorneys’ strategies in filing motions and shaping the way the case progresses, and this chapter will not only describe what these strategies look like empirically, but also evaluate how these strategies differ between attorneys of different types, quality, and experience.</p>
+</div>
+<div id="judges-and-case-outcomes" class="section level4 unnumbered">
+<h4 class="unnumbered">Judges and Case Outcomes</h4>
+<p>The second section will then deepen our understanding of traditional case outcomes by reconceptualizing “winning" and”loosing" in a way that more closely resembles the resolution of cases at the trial courts. I will shift the dispositive outcome from the traditionally used dichotomous indicator of the first or most serious charge to an ordinal indicator that incorporates the disposition of up to five charges. This will allow for a better understanding of how the process of the case affects what the ultimate outcome is, taking into account both case process in the attorney’s strategies and traditional case characteristics to understand variation in the way cases are resolved. Especially where judges do not decide the outcome of the case itself, the goal in this section is to gain a better understanding of how case outcomes follow from case processes, including the decisions made by judges on the motions throughout the case.</p>
+</div>
+<div id="appealing-district-court-outcomes" class="section level4 unnumbered">
+<h4 class="unnumbered">Appealing District Court Outcomes</h4>
+<p>The final section will then turn to the question of “what happens next?" examining a defendant’s decision to appeal in light of both the process and outcome of their district court case. The goal of this section is to model and assess how both the process of the case and the ultimate outcome weigh on a defendant’s decision to appeal. Using a formal decision-theoretic model and an EITM approach, this section will incorporate insights from the previous sections to better understand for which cases the federal district courts are not the final venue to rule and what aspects of the district court experience lead to that decision to appeal.</p>
+</div>
+</div>
+<div id="intellectual-merit" class="section level2 unnumbered">
+<h2 class="unnumbered">Intellectual Merit</h2>
+<p>In the literature on trial courts, and even courts in general, so much of the complex justice process is simplified down to a dichotomous outcome of who wins and who loses. At the district courts especially, this simplification misses out on the nuance of the case itself, where the answer is not about the law, but about the facts. And, because “winning" and”losing" mean something a bit different in this trial court context, we can expect that conventional theories of trial court decision making may also be missing out on the complexities of the case process, dispositive outcomes, and progression of the case through to appeal, especially in relation to the many actors in the courtroom. This project will not only contribute to the limited but growing data available on district courts, but will add vital information that will allow scholars to capture the realities of trial judge decision-making, where attorneys take an active role in influencing the process and where outcomes are not so simple as a dichotomy.</p>
+<p>The district courts are the courts of first <em>and</em> last instance for all but a small portion of the cases brought before them, and it is crucial for us as scholars to shift to studying them to properly understand not only the way they influence law, policy, and society writ large, but also how they influence the courts above them. What district court scholarship exists rarely takes into account the active and influential role of attorneys in district judge decision-making, but the data resulting from this project will allow for the study of these crucial aspects and others that incorporate the nuances of district court case processing and disposition.</p>
+</div>
+<div id="broader-impact" class="section level2 unnumbered">
+<h2 class="unnumbered">Broader Impact</h2>
+<p>The largest component of this project is data collection to supplement the available data on federal district judge decision-making and case processing. To accomplish this, I will recruit and hire undergraduate students as research assistants, including those from traditionally underrepresented groups. By including undergraduates in this effort, the project will provide experience in data collection, rigorous scholarly research, and empirical analysis. And, I will encourage the undergraduates I hire to share their experience during the University of South Carolina’s Discover UofSC Day, which showcases “research, creativity, leadership, scholarship, and innovation" from across the university.</p>
+<p>The data I intend to collect on federal district court attorneys will be of broad use across the political science and criminal justice fields, especially with a recent move toward focusing on the non-judge actors in the courtroom at upper levels of the federal judiciary. The resulting data on attorney demographics, quality, and experience will allow scholars of the district courts the opportunity to develop and test theories that are appropriate for the unique context of these courts. Moreover, given the emphasis on attorneys, fields like sociology and empirical legal research will also benefit from the resulting data.</p>
+<p>The lack of studies developing and testing appropriate theories of district judge decision-making, and rather transplanting theories from the appellate courts, is the result of little available data. What data are available are hard to find and often vary in geographic and temporal coverage, so studies of the federal district courts are often limited to a single or a select few districts, reducing the generalizability of any results. Moreover, the indicators included in data on the federal district courts lag behind that of the appellate courts, often only including the “basics" like judge ideology. The data resulting from this project will provide vase improvements not only because it will cover all 94-districts for a three year time-span, but because it will be the first attorney-level data for the federal district courts, incorporating information that is often only accessible through legal research subscriptions, and will merge seamlessly with, one of if not, the largest datasets on federal district court decisions housed through ICPSR and an existing expansion of that data.</p>
+<p>This data will be made available no more than one year after the completion of the grant and will be archived in several popular and easily-accessible repositories including The Songer Project, Harvard’s Dataverse, and ICPSR, which will facilitate its use by scholars from many fields. This project takes an important first step toward overcoming the challenges of studying the federal district courts by collecting and disseminating data on the attorneys that play such an important role in the process and ultimately influence not only the case outcome but policy and society as a whole. The data provided herein will allow scholars to better capture the realities of judicial decision-making, case processing, and dispositions at the federal district courts and understand the influence these courts have on the “winners" and”losers" of both cases and society as a whole.</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent">
+<div id="ref-baum_1997">
+<p>Baum, Lawrence. 1997. <em>The Puzzle of Judicial Behavior</em>. University of Michigan Press.</p>
+</div>
+<div id="ref-baum_2006">
+<p>———. 2006. <em>Judges and Their Audiences: A Perspective on Judicial Behavior</em>. Cambridge; London: Harvard University Press.</p>
+</div>
+<div id="ref-bibas_2004">
+<p>Bibas, Stephanos. 2004. “Plea Bargaining Outside the Shadow of Trial.” <em>Harvard Law Review</em> 117 (8): 2463–2547.</p>
+</div>
+<div id="ref-boyd_2017">
+<p>Boyd, Christina. 2017. “Gatekeeping and Filtering in Trial Courts.” In <em>The Oxford Handbook of U.S. Judicial Behavior</em>, Eds. Lee Epstein and Stefanie Lindquist. New York: Oxford University Press.</p>
+</div>
+<div id="ref-BKS_2020">
+<p>Boyd, Christina, Pauline Kim, and Margo Schlanger. 2020. “Mapping the Iceberg: The Impact of Data Sources on the Study of District Courts.” <em>Journal of Empirical Legal Studies</em> 17 (3): 466–92.</p>
+</div>
+<div id="ref-BB_2017">
+<p>Boyd, Christina L., and Ethan D. Boldt. 2017. “U.S. District Courts.” In <em>Routledge Handbook of Judicial Behavior</em>, edited by Robert M. Howard and Kirk A. Randazzo. Routledge.</p>
+</div>
+<div id="ref-CR_1983">
+<p>Carp, Robert A., and C. K. Rowland. 1983. <em>Policymaking and Politics in the Federal District Courts</em>. University of Tennessee Press.</p>
+</div>
+<div id="ref-CW_1972">
+<p>Carp, Robert, and Russell Wheeler. 1972. “Sink or Swim: The Socialization of a Federal District Judge.” <em>Journal of Public Law</em>, 37.</p>
+</div>
+<div id="ref-DH_2012">
+<p>Dumas, Tao, and Stacia Haynie. 2012. “Building an Interated Model of Trial Court Decision Making: Predicting Plaintiff Success and Awards Across Circuits.” <em>State Politics &amp; Policy Quarterly</em> 12: 103–26.</p>
+</div>
+<div id="ref-eisenberg_2004">
+<p>Eisenberg, Theodore. 2004. “Appeal Rates and Outcomes in Tried and Nontried Cases: Further Exploration of Anti-Plaintiff Appellate Outcomes.” <em>Journal of Empirical Legal Studies</em> 1 (3): 659–88.</p>
+</div>
+<div id="ref-EJ_1977">
+<p>Eisenstein, James, and Herbert Jacob. 1977. <em>Felony Justice: An Organizational Analysis of Criminal Courts</em>. Boston: Little Brown; Company Inc.</p>
+</div>
+<div id="ref-EK_1998">
+<p>Epstein, Lee, and Jack Knight. 1998. <em>The Choices Justices Make</em>. Washington, DC: CQ Press.</p>
+</div>
+<div id="ref-ELP_2013">
+<p>Epstein, Lee, William M. Landes, and Richard A. Posner. 2013. <em>The Behavior of Federal Judges: A Theoretical and Empirical Study of Rational Choice</em>. Harvard University Press.</p>
+</div>
+<div id="ref-eskridge_1991">
+<p>Eskridge, William. 1991. “Overriding Supreme Court Statutory Interpretation Decisions.” <em>Yale Law Journal</em> 101: 331–417.</p>
+</div>
+<div id="ref-gibson_1983">
+<p>Gibson, James. 1983. “From Simplicity to Complexity: The Development of Theory in the Study of Judicial Behavior.” <em>Political Behavior</em> 5 (1): 7–49.</p>
+</div>
+<div id="ref-HLS_2003">
+<p>Haire, Susan B., Stefanie A. Lindquist, and Donald R. Songer. 2003. “Appellate Court Supervision in the Federal Judiciary: A Hierarchical Perspective.” <em>Law &amp; Society Review</em> 37 (1): 143–68.</p>
+</div>
+<div id="ref-heise_2000">
+<p>Heise, Michael. 2000. “Justice Delayed: An Empirical Analysis of Civil Case Disposition Time.” <em>Case Western Reserve Law Review</em> 50: 813–50.</p>
+</div>
+<div id="ref-HIL_2007">
+<p>Hoffman, David A, Alan J Izenman, and Jeffrey R Lidicker. 2007. “Docketology, District Courts, and Doctrine.” <em>Wash. UL Rev.</em> 85: 681.</p>
+</div>
+<div id="ref-KMFZ_2009">
+<p>Keele, Denise M., Robert W. Malmsheimer, Donald W. Floyd, and Lianjun Zhang. 2009. “An Analysis of Ideological Effects in Published Versus Unpublished Judicial Opinions.” <em>Journal of Empirical Legal Studies</em> 6 (1): 213–39.</p>
+</div>
+<div id="ref-KSBM_2010">
+<p>Kim, Pauline, Margo Schlanger, Christina Boyd, and Andrew Martin. 2010. “How Should We Study District Judge Decision-Making?” <em>Washington University Journal of Law and Policy</em>.</p>
+</div>
+<div id="ref-king_1997">
+<p>King, Kimi. 1997. “Review of Politics and Judgement in Federal District Courts.” Law; Courts Section, APSA.</p>
+</div>
+<div id="ref-kritzer_1978">
+<p>Kritzer, Herbert. 1978. “Political Correlates of the Behavior of Federal District Judges: A”Best Case" Analysis.” <em>The Journal of Politics</em> 40 (1).</p>
+</div>
+<div id="ref-kritzer_1991">
+<p>Kritzer, Herbert M. 1991. <em>Let’s Make a Deal: Understanding the Negotiation Process in Ordinary Litigation</em>. Univ of Wisconsin Press.</p>
+</div>
+<div id="ref-lyles_1995">
+<p>Lyles, Kevin. 1995. <em>The Gatekeepers: Federal District Courts in the Political Process</em>. Greenwood Publishing Group.</p>
+</div>
+<div id="ref-mather_1983">
+<p>Mather, Lynn. 1983. “Epilogue: Ways to Organize the Study of Courts.” In <em>Empirical Theories About Courts</em>, edited by Keith Boyum and Lynn Mather. NY: Longman, Inc.</p>
+</div>
+<div id="ref-metcalfe_2016">
+<p>Metcalfe, Christi. 2016. “The Role of Courtroom Workgroups in Felony Case Dispositions: An Analysis of Workgroup Familiarity and Similarity.” <em>Law Soc Rev</em> 50 (3): 637–73. <a href="https://doi.org/10.1111/lasr.12217" class="uri">https://doi.org/10.1111/lasr.12217</a>.</p>
+</div>
+<div id="ref-pritchett_1948">
+<p>Pritchett, C. Herman. 1948. <em>The Roosevelt Court: A Study in Judicial Politics and Values 1937-1947</em>. New York: MacMillan.</p>
+</div>
+<div id="ref-resnik_1982">
+<p>Resnik, Judith. 1982. “Managerial Judges.” <em>Harvard Law Review</em> 96 (2): 374.</p>
+</div>
+<div id="ref-resnik_1985">
+<p>———. 1985. “Managerial Judges: The Potential Costs.” <em>Public Administration Review</em> 45: 686–90.</p>
+</div>
+<div id="ref-RS_1976">
+<p>Rohde, David, and Harold Spaeth. 1976. <em>Supreme Court Decision Making</em>. San Francisco: W. H. Freeman.</p>
+</div>
+<div id="ref-RC_1996">
+<p>Rowland, C. K., and Robert Carp. 1996. <em>Politics and Judgement in Federal District Courts</em>. University Press of Kansas.</p>
+</div>
+<div id="ref-SS_1993">
+<p>Segal, Jeffrey, and Harold Spaeth. 1993. <em>The Supreme Court and the Attitudinal Model</em>. Cambridge: Cambridge University Press.</p>
+</div>
+<div id="ref-schubert_1965">
+<p>Shubert, Glendon. 1965. <em>The Judicial Mind: The Attitudes and Ideologies of Supreme Court Justices, 1946-1963</em>. Evanston: Northwestern University Press.</p>
+</div>
+<div id="ref-SALS_2019">
+<p>Smith, Sven, Robert Askew, Emily Lang, and Justin Smith. 2019. “Courthouse Size and Its Impact on Judicial Performance: Insights from Weber’s Theory of Rationality.” <em>Journal of Law and Courts</em> 7 (2): 215–40.</p>
+</div>
+<div id="ref-WG_2013">
+<p>Williams, Margaret, and Tracey George. 2013. “Who Will Manage Complex Civil Litigation? The Decision to Transfer and Consolidate Multidistrict Litigation.” <em>Journal of Empirical Legal Studies</em> 10 (3): 424–61.</p>
+</div>
+<div id="ref-ZB_2010">
+<p>Zorn, Christopher, and Jennifer Barnes Bowie. 2010. “Ideological Influences on Decision Making in the Federal Judicial Hierarchy: An Empirical Assessment.” <em>The Journal of Politics</em> 72 (4): 1212–21.</p>
+</div>
+</div>
+</div>
+<div id="footnotes" class="section level2 unnumbered">
+<h2 class="unnumbered">Footnotes</h2>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Eisenberg (2004) arrives at 11% using 1988-2000 data on appeals of filed civil cases while Haire, Lindquist, and Songer (2003) arrive at 20% using published civil rights decisions 1971-1999.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Throughout this project description, I will use “parties" to refer to attorney-litigant units and the individual”attorney" and “litigant" to indicate the specific actors.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>The coding scheme for these demographic characteristics is based on the subject’s name and any publicly available photographs. Although ascribing identities to individuals based on names and appearance may not be appropriate in some circumstances, in this project the interest is not in the individual’s <em>actual</em> identity but instead in the identity likely ascribed to them by other courtroom actors, based on visual cues like name and physical appearance, and the influence of such ascribed stereotypes and judgements on the case’s process.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>This is obviously not a perfect relationship, especially in light of the likely selection effects between attorneys that go to Ivy League schools and their propensity to practice as prosecutors versus defense attorneys and private versus public counsel. I will need to grapple with the fact that attendance at an Ivy League school is also likely a function of non-quality related factors, including bias in the application process.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Of note, the most recent three years of data collection are anticipated to be completed for the existing NSF-funded data collection before I begin the supplemental data collection described herein.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+   
+      <!--radix_placeholder_site_after_body-->
+      <!--/radix_placeholder_site_after_body-->
+      <!--radix_placeholder_navigation_after_body-->
+      <!--/radix_placeholder_navigation_after_body-->
+   
+           </section>
+  </div>
+  </div>
+  </div>
+  </div>
+      
+      
+
+  <script>
+    $(document).ready(function () {
+
+		// add bootstrap table styles to pandoc tables
+	$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+		
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>

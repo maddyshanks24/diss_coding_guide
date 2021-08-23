@@ -1,0 +1,50 @@
+---
+title: "Project Summary"
+description: |
+author:
+  - name: Maddy Shanks 
+    url: 
+    affiliation: University of South Carolina
+    affiliation_url: 
+#date: "`r Sys.Date()`"
+header-includes:
+##- \usepackage{kotex}
+#mainfont: mathpazo
+#urlcolor: blue
+output: 
+  rmdformats::robobook:
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=TRUE,
+               eval = FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               out.extra = 'style="float:center;"')
+opts_knit$set(width=75)
+```
+
+# Research Question
+This project asks what it means to win and lose at the federal district courts, expanding beyond the traditional “win” or “lose” decision to which so much of judicial politics scholarship has been simplified. Because of the multiple decision points in a trial and the active role attorneys take in the decision-making process, therein lies the weakness in understanding a case outcome as a singular, dichotomous decision and in using that case outcome to understand district judge decision making. Case outcomes are more complex at trial courts and we must understand both the procedural and dispositive outcomes in the context of the trial court environment, including the roles and interaction of the judges and attorneys. 
+
+# Theoretical Motivation
+The project will juxtapose traditional ideological models of judicial decision-making with the role attorneys play in influencing case processing, dispositions, and the decision to appeal, situating the theories within the specific and nuanced context of the district courts. For these trial courts, the ultimate case outcome is the culmination of motions, judgements, and decisions made on the part of the judge and attorneys over the process of the case and this process ultimately frames the facts of the case that will be carried through to any appeals. Outcomes at the district courts are rarely conceptualized in this way in the existing literature. To expand our understanding of these outcomes then, scholars must take into account the unique role of the federal district courts in the judicial system, the context in which district court decisions are made, and the influence of attorneys in that process. 
+
+# Data Collection
+The data collected as a part of this grant will expand upon an existing data collection effort (NSF Grant # 1920991) that includes case and judge level information for a random sample of criminal cases for each year from 2007-2016. The data collection supported by the DDRIG will expand this data to include indicators of attorney demographics, experience, and quality which will then be used to provide insights about not only district judge decision making, but also attorney strategy, broader case outcomes at the federal district courts, and the progression of cases to an appeal.  With little data available about attorneys at the lower federal courts, scholars have yet to be able to test theories about the district courts that incorporate the important part attorneys play as the drivers of the justice process and that speak to the interdependence between attorneys and judges throughout a trial. This grant will provide for the collection of data that can be used to understand and test these roles and relationships.
+
+
+
+
+
+
+

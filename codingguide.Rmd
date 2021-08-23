@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+description: |
+author:
+  - name: Maddy Shanks 
+    url: 
+    affiliation: University of South Carolina
+    affiliation_url: 
+#date: "`r Sys.Date()`"
+header-includes:
+##- \usepackage{kotex}
+#mainfont: mathpazo
+#urlcolor: blue
+output: 
+  rmdformats::robobook:
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Coding Guide Coming Soon!
+
+
+
+
+
