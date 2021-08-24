@@ -1,19 +1,9 @@
 ---
 title: "Untitled"
 description: |
-author:
-  - name: Maddy Shanks 
-    url: 
-    affiliation: University of South Carolina
-    affiliation_url: 
-#date: "`r Sys.Date()`"
-header-includes:
-##- \usepackage{kotex}
-#mainfont: mathpazo
-#urlcolor: blue
-output: 
-  rmdformats::robobook:
-    self_contained: false
+output:
+  distill::distill_article:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}

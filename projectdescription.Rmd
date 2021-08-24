@@ -1,19 +1,9 @@
 ---
 title: "Project Description"
 description: |
-author:
-  - name: Maddy Shanks 
-    url: 
-    affiliation: University of South Carolina
-    affiliation_url: 
-#date: "`r Sys.Date()`"
-header-includes:
-##- \usepackage{kotex}
-#mainfont: mathpazo
-#urlcolor: blue
-output: 
-  rmdformats::robobook:
-    self_contained: false
+output:
+  distill::distill_article:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -830,8 +820,6 @@ Empirical Assessment." *The Journal of Politics* 72 (4): 1212--21.
 :::
 :::
 
-Footnotes {#footnotes .unnumbered}
-------------------
 
 [^1]: Eisenberg (2004) arrives at 11% using 1988-2000 data on appeals of
     filed civil cases while Haire, Lindquist, and Songer (2003) arrive
